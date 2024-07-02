@@ -51,3 +51,37 @@ footer {
 main {
   padding: 30px 0;
 }
+.weather-app-city {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+  color: rgb(71, 70, 70);
+}
+.weather-app-details {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(105, 103, 103);
+}
+.weather-app-details strong {
+  color: rgb(242, 133, 151);
+}
+.weather-app-temperature {
+  display: flex;
+}
+
+.weather-app-icon {
+  font-size: 44px;
+  margin-top: 22px;
+}
+.weather-app-number {
+  font-size: 88px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: rgb(71, 70, 70);
+}
+.weather-app-unit {
+  margin-top: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(71, 70, 70);
+}
