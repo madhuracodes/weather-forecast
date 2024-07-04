@@ -33,6 +33,10 @@ function formatDate(date) {
   ];
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 }
 function initCity() {
   searchCity("Berlin");
