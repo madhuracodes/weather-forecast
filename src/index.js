@@ -5,6 +5,10 @@ function refreshWeather(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let timeElement = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
+
+  timeElement.innerHTML = `${date.getDay()} ${date.getHours()}: ${date.getMinutes()}`;
 
   windElement.innerHTML = response.data.wind.speed;
 
@@ -14,6 +18,10 @@ function refreshWeather(response) {
 
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
+}
+
+function initCity() {
+  searchCity("Berlin");
 }
 
 function searchCity(city) {
@@ -43,3 +51,7 @@ function handleSearchSubmit(event) {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+window.onload = function () {
+  initCity();
+};
